@@ -1,7 +1,4 @@
-<input
-  type="text"
-  (change)=" setNewUserName($event.target as HTMLInputElement).value"
-/>
+<input type="text" (change)="setNewUserName($event.target.value)" />
 <button (click)="addUser()">Add user</button>
 <div *ngFor="let user of users">
   {{ user.name }} is {{ user.age }} years old
